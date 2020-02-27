@@ -15,4 +15,5 @@ COPY --from=compile "/home/source/sprint_boot_with_kafka/build/libs/sprint_boot_
 EXPOSE 8080
 RUN apk --no-cache add curl
 ENTRYPOINT ["java", "-jar", "/home/application/java/sprint_boot_with_kafka-0.0.1-SNAPSHOT.jar"]
-HEALTHCHECK CMD curl --fail http://localhost:8080/actuator-admin/health || exit 1
+
+#HEALTHCHECK CMD curl --fail http://localhost:8080/actuator-admin/health || exit 1
